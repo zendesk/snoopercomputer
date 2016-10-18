@@ -1,0 +1,14 @@
+{
+  "base_url": "https://swapi.co",
+  "endpoints": [
+    {
+      "url": "/people/1/",
+      "features": ["clickjacking_defense"]
+    }, {
+      "url": "/people/2/"
+    }, {
+      "url": "/people/3/",
+      "features": ["not_clickjacking_defense"]
+    }
+  ]
+}
