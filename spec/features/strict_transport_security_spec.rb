@@ -3,10 +3,10 @@ require 'spec_helper'
 
 describe 'HTTP Strict Transport Security' do
   if URI(base_url).scheme == 'https'
-    map_feature_to_targets do |url|
-      context "#{base_url}#{url}" do
+    map_feature_to_targets do |endpoint|
+      context "#{base_url}#{endpoint.url}" do
         before(:each) do
-          get url
+          get endpoint.url
         end
 
         it 'Strict-Transport-Security header is present' do

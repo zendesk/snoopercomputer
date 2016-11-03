@@ -2,10 +2,10 @@ require 'airborne'
 require 'spec_helper'
 
 describe 'Mixed Content Defense' do
-  map_feature_to_targets do |url|
-    context "#{base_url}#{url}" do
+  map_feature_to_targets do |endpoint|
+    context "#{base_url}#{endpoint.url}" do
       before(:each) do
-        get url
+        get endpoint.url
       end
 
       it 'body contains no mixed content or default-src CSP header is present' do

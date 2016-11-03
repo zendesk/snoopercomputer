@@ -3,12 +3,16 @@
   "endpoints": [
     {
       "url": "/people/1/",
-      "features": ["clickjacking_defense"]
+      "features": [
+        { "name": "clickjacking_defense" }
+      ]
     }, {
       "url": "/people/2/"
     }, {
       "url": "/people/3/",
-      "features": ["not_clickjacking_defense"]
+      "features": [
+        { "name": "not_clickjacking_defense" }
+      ]
     }
   ]
 }

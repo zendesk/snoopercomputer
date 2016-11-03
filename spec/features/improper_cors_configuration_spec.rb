@@ -2,10 +2,10 @@ require 'airborne'
 require 'spec_helper'
 
 describe 'Improper CORS Configuration Headers' do
-  map_feature_to_targets do |url|
-    context "#{base_url}#{url}" do
+  map_feature_to_targets do |endpoint|
+    context "#{base_url}#{endpoint.url}" do
       before(:each) do
-        get url
+        get endpoint.url
       end
 
       it 'returns the Access-Control-Allow_Origin header' do
