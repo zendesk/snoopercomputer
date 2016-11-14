@@ -9,13 +9,13 @@ If you have questions, please start on the [mailing list] instead of opening an 
 1. Fork it
 1. Branch it
 1. Build it
-1. PR back to `master` on `zendesk/snoopercomputer`
+1. PR back to `master` on [`zendesk/snoopercomputer`](https://github.com/zendesk/snoopercomputer)
 
 ## Pull Requests
 
-- **Add tests!** Your patch won't be accepted if it doesn't have tests.
+- **Add tests!** This project is still new, so please add unit tests with your PR if you can. This is more of a "strongly recommended" thing than a requirement.
 
-- **Document any change in behaviour**. Make sure the README and any other relevant documentation are kept up-to-date.
+- **Document any change in behaviour**. Make sure the README and any other relevant documentation are kept up-to-date. Also, make sure your PR description clearly describes your changes.
 
 - **Create topic branches**. Don't ask us to pull from your master branch.
 
