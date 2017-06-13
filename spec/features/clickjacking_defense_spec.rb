@@ -1,4 +1,3 @@
-require 'airborne'
 require 'spec_helper'
 
 describe 'Clickjacking Defense' do

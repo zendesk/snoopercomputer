@@ -1,4 +1,3 @@
-require 'airborne'
 require 'spec_helper'
 
 describe 'Mixed Content Defense' do
