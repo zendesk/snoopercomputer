@@ -1,15 +1,25 @@
 module FeatureHelper
-  def map_feature_to_targets(&block)
-    current_targets.endpoints.each do |endpoint|
+  def applicable_endpoints
+    current_targets.endpoints.select do |endpoint|
       if endpoint.features && !endpoint.features.empty?
-        endpoint.features.each do |feature|
-          if block.source_location[0].include? feature.name
-            block.call(endpoint)
-          end
+        # Features list for endpoint exists, so determine if the current spec matches any of the entries
+        endpoint.features.any? do |feature|
+          should_run_for_endpoint?(feature.name)
         end
       else
-        block.call(endpoint)
+        # Run for the current endpoint because no features list exists to filter on
+        true
       end
+    end
+  end
+
+  private
+
+  def should_run_for_endpoint?(feature)
+    # Check for spec that matches feature name in call stack to determine if the current spec
+    # should be run against the current endpoint
+    caller.any? do |line|
+      line.include?(feature)
     end
   end
 end

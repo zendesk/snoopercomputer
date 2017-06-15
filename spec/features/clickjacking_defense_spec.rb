@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Clickjacking Defense' do
-  map_feature_to_targets do |endpoint|
+  applicable_endpoints.each do |endpoint|
     context "#{base_url}#{endpoint.url}" do
       before (:each) do
         get endpoint.url
