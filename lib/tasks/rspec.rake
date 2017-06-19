@@ -6,7 +6,7 @@ task :rspec do
 
   default_args = {
     :concurrency => 20,
-    :files => 'spec'
+    :files => 'lib/features'
   }
 
   concurrency = env_args[:concurrency]    || default_args[:concurrency]
