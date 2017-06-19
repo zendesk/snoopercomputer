@@ -5,10 +5,10 @@ require 'hashie'
 def load_targets(targets = ENV.fetch('targets', 'targets'))
   load_json(targets)
 rescue => e
-  raise "Error loading targets info\n#{e.message}\nPlease add testing target info in spec/fixtures/targets and specify target in command line"
+  raise "Error loading targets info\n#{e.message}\nPlease add testing target info in lib/fixtures/targets and specify target in command line"
 end
 
-def load_json(filename = 'targets', path = './spec/fixtures/targets')
+def load_json(filename = 'targets', path = './lib/fixtures/targets')
   absolute_path = File.expand_path(File.join(path, "#{filename}.json"))
   Hashie::Mash.new(JSON.parse(open(absolute_path).read))
 end
@@ -26,7 +26,7 @@ def base_url
 end
 
 # Require all helper files
-require_files './spec/support'
+require_files './lib/support'
 
 Airborne.configure do |config|
   config.base_url = current_targets.base_url
