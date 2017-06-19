@@ -1,3 +1,5 @@
 lib/fixtures/targets/*.json
 **/.DS_Store
 .byebug_history
+.yardoc
+doc

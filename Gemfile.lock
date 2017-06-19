@@ -63,6 +63,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
+    yard (0.9.9)
 
 PLATFORMS
   ruby
@@ -74,6 +75,7 @@ DEPENDENCIES
   hashie
   parallel_tests
   rake
+  yard
 
 BUNDLED WITH
    1.13.3

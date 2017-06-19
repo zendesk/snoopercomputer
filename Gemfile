@@ -8,4 +8,5 @@ gem 'hashie'
 
 group :development do
   gem 'byebug'
+  gem 'yard'
 end
