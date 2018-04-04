@@ -8,5 +8,5 @@ gem 'hashie'
 
 group :development do
   gem 'byebug'
-  gem 'yard'
+  gem 'yard', '~> 0.9.11'
 end
